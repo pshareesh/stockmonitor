@@ -1,0 +1,3 @@
+# stockmonitor
+
+My first project
