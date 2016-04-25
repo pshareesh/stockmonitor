@@ -1,0 +1,18 @@
+phase 1:
+
+1) Build a screen which will read json from file and list in a table
+2) Get stock price from yahoo finance and display on table
+
+http://finance.yahoo.com/webservice/v1/symbols/YHOO,AAPL/quote?format=json&view=detail
+
+
+phase 2:
+
+1) Ability to add new stock
+2) Ability to edit and delete
+
+phase 3:
+
+1) Track trades. multi leg entries and ROR overall
+2) Link with google drive. Push trade file to google drive
+

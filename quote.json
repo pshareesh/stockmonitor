@@ -1,0 +1,41 @@
+{
+"list" : { 
+"meta" : { 
+"type" : "resource-list",
+"start" : 0,
+"count" : 2
+},
+"resources" : [ 
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Yahoo! Inc.",
+"price" : "37.500000",
+"symbol" : "YHOO",
+"ts" : "1461166091",
+"type" : "equity",
+"utctime" : "2016-04-20T15:28:11+0000",
+"volume" : "12324268"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Apple Inc.",
+"price" : "107.730003",
+"symbol" : "AAPL",
+"ts" : "1461166093",
+"type" : "equity",
+"utctime" : "2016-04-20T15:28:13+0000",
+"volume" : "12754503"
+}
+}
+}
+
+]
+}
+}

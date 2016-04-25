@@ -1,0 +1,15 @@
+[{
+  "symbol":"AAPL",
+  "stock_price": 105,
+  "alert_price": 100
+},
+{
+  "symbol":"MS",
+  "stock_price": 105,
+  "alert_price": 100
+},
+{
+  "symbol":"TWTR",
+  "stock_price": 105,
+  "alert_price": 100
+}];
