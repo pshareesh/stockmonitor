@@ -3,20 +3,20 @@
 "meta" : { 
 "type" : "resource-list",
 "start" : 0,
-"count" : 2
+"count" : 3
 },
 "resources" : [ 
 {
 "resource" : { 
 "classname" : "Quote",
 "fields" : { 
-"name" : "Yahoo! Inc.",
-"price" : "37.500000",
-"symbol" : "YHOO",
-"ts" : "1461166091",
+"name" : "Apple Inc.",
+"price" : "99.699898",
+"symbol" : "AAPL",
+"ts" : "1464282175",
 "type" : "equity",
-"utctime" : "2016-04-20T15:28:11+0000",
-"volume" : "12324268"
+"utctime" : "2016-05-26T17:02:55+0000",
+"volume" : "33825884"
 }
 }
 }
@@ -25,13 +25,28 @@
 "resource" : { 
 "classname" : "Quote",
 "fields" : { 
-"name" : "Apple Inc.",
-"price" : "107.730003",
-"symbol" : "AAPL",
-"ts" : "1461166093",
+"name" : "Morgan Stanley Common Stock",
+"price" : "27.434999",
+"symbol" : "MS",
+"ts" : "1464282165",
 "type" : "equity",
-"utctime" : "2016-04-20T15:28:13+0000",
-"volume" : "12754503"
+"utctime" : "2016-05-26T17:02:45+0000",
+"volume" : "4997948"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Cisco Systems, Inc.",
+"price" : "28.887100",
+"symbol" : "CSCO",
+"ts" : "1464282173",
+"type" : "equity",
+"utctime" : "2016-05-26T17:02:53+0000",
+"volume" : "10446494"
 }
 }
 }

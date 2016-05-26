@@ -10,34 +10,55 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
-
-   
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+   <link rel="stylesheet" type="text/css" href="stock.css">
   </head>
   <body>
   	<div class="container">
     	<h2>Watch List</h2>
     	
-    	Content goes here <br/>
+    
+    	<div id="jqTableDiv">
+		    <table id="stockTable" class="display">
+		    <thead>
+		        <tr>
+		            <th>Symbol</th>
+		            <th>Price</th>
+		            <th>Alert Price</th>
+		            <th>Edit</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		    	<% appdata.forEach(function(item) { %>
+		        <tr class="alert">
+		            <td><%= item.symbol%></td>
+		            <td><%= item.price%></td>
+		            <td><%= item.alert_price%></td>
+		            <td><button onclick="showDlg('<%= item.symbol%>', '<%= item.alert_price%>');">Change</button>
+		            &nbsp;&nbsp;<button onclick="deleteStock('<%= item.symbol%>');">Delete</button></td>
+		        </tr>
+		        <% }); %>
+		        
+		    </tbody>
+			</table>
+		</div>
+		<button onclick="showAddDlg();">Add Stock</button>
+		
 
-	    <table id="stockTable" class="display">
-	    <thead>
-	        <tr>
-	            <th>Symbol</th>
-	            <th>Price</th>
-	        </tr>
-	    </thead>
-	    <tbody>
-	    	<% appdata.forEach(function(item) { %>
-	        <tr>
-	            <td><%= item.symbol%></td>
-	            <td><%= item.price%></td>
-	        </tr>
-	        <% }); %>
-	        
-	    </tbody>
-		</table>
-
-    	<%=appdata[0].symbol %> <%=appdata[0].price %>
+	<div id="editDialog" title="Edit Price" style="display:none;">
+	 
+	  	Symbol:<input id="editSym"></input> 
+	  	Price:<input id="editPrice"></input>
+	  	 <input type="button" id="editStock" value="Save">
+	  
+	</div>
+	<div id="addDialog" title="Add Stock" style="display:none;">
+	 
+	  	Symbol:<input id="addSym"></input> 
+	  	Alert Price:<input id="addPrice"></input>
+	  	 <input type="button" id="addStock" value="Save">
+	  
+	</div>
     	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -45,11 +66,83 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
  	<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+ 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
  	<script>
  	$(document).ready(function(){
  		 $('#stockTable').DataTable();
+ 		 $( "#editDialog" ).dialog();
+ 		 $( "#addDialog" ).dialog();
+ 		 $('#addDialog').dialog("close");
+ 		 $('#editDialog').dialog("close");
+ 		// setInterval("reloadPage();",120000); 
+ 
+ 		 var symbol, price;
+		
+ 		 /* Edit Stock */
+ 		 $('#editStock').click(function(){
+ 		 	console.log("clicked submit button" + $('#editSym').val());
+          symbol=$('#editSym').val();
+          price=$('#editPrice').val();
+          $.post('http://localhost:3000/save',{symbol: symbol,price: price}, function(data){
+            createStockTable(data);
+          });
+          $('#editDialog').dialog("close");
+        });
+ 		 /* Add Stock */
+ 		 $('#addStock').click(function(){
+ 		 	console.log("clicked add button" + $('#editSym').val());
+          symbol=$('#addSym').val();
+          price=$('#addPrice').val();
+          $.post('http://localhost:3000/add',{symbol: symbol,price: price}, function(data){
+            createStockTable(data);
+          });
+          $('#addDialog').dialog("close");
+        });
+
 
  	});
+
+ /* Create Table */
+ 		function createStockTable(stockData){
+
+	 		var table = $('<table id=\'stockTable\'></table>');
+	 		table.append('<thead><tr><th>Symbol</th><th>Price</th><th>Alert Price</th><th>Edit</th></tr></thead>');
+			for(i=0; i<stockData.length; i++){
+				var stock = stockData[i];
+			    var row = '<tr>' + '<td>' + stock.symbol + '</td>' + '<td>' + stock.price + 
+			    '</td>' + '<td>' + stock.alert_price + '</td>' +
+			    '<td><button onclick="showDlg(\'' + stock.symbol + '\',\'' + stock.alert_price + '\')\;">Change</button>' +
+			    '</td>' +
+			    '</tr>';
+			    table.append(row);
+			}
+			$('#jqTableDiv').html(table);
+			$('#stockTable').DataTable();
+		}
+
+ 	function showDlg(symbol, alertPrice){
+ 		$('#editSym').val(symbol);
+ 		$('#editPrice').val(alertPrice);
+ 		$('#editDialog').dialog("open");
+ 	}
+
+ 	function deleteStock(symbol){
+ 		console.log("clicked delete" + symbol);    
+        $.post('http://localhost:3000/delete',{symbol: symbol}, function(data){
+           createStockTable(data);
+        });
+    }
+ 	
+
+ 	function showAddDlg(){
+ 		$('#addDialog').dialog("open");
+ 	}
+	function reloadPage(){
+        	window.location = location.href;
+    }
+
+   
  	</script>
 
   </body>

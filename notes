@@ -3,7 +3,7 @@ phase 1:
 1) Build a screen which will read json from file and list in a table
 2) Get stock price from yahoo finance and display on table
 
-http://finance.yahoo.com/webservice/v1/symbols/YHOO,AAPL/quote?format=json&view=detail
+http://finance.yahoo.com/webservice/v1/symbols/YHOO,AAPL/quote?format=json
 
 
 phase 2:
