@@ -30,7 +30,7 @@
 		    </thead>
 		    <tbody>
 		    	<% appdata.forEach(function(item) { %>
-		        <tr class="alert">
+		        <tr>
 		            <td><%= item.symbol%></td>
 		            <td><%= item.price%></td>
 		            <td><%= item.alert_price%></td>
@@ -53,11 +53,17 @@
 	  
 	</div>
 	<div id="addDialog" title="Add Stock" style="display:none;">
-	 
+	 <table>
+	 	<tr>
 	  	Symbol:<input id="addSym"></input> 
+	  	</tr>
+	  	<tr>
 	  	Alert Price:<input id="addPrice"></input>
-	  	 <input type="button" id="addStock" value="Save">
-	  
+	  	</tr>
+	  	<tr>
+	  	<input type="button" id="addStock" value="Save">
+	  	</tr>
+	  </table>
 	</div>
     	</div>
 

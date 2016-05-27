@@ -101,10 +101,7 @@ function initializeQuotes(){
 		     }
 		 	});
 	});
-	fs.readFile('./quote.json', function (err, fData) {
-  		if (err) throw err;
-  		qData = JSON.parse(fData);
-	});
+
 	for(var i=0; i < qData.list.resources.length; i++){
 		var price = qData.list.resources[i].resource.fields.price;
 		quoteMap[qData.list.resources[i].resource.fields.symbol] = price.substring(0,5);
@@ -113,11 +110,7 @@ function initializeQuotes(){
 
 function initialize(){
 	stockData.length =0;
-	fs.readFile('./data.json', function (err, fData) {
-  		if (err) throw err;
-  		data = JSON.parse(fData);
-	});
-//	data = require('./data.json');
+	data = require('./data.json');
 	stockSymbols.splice(0,stockSymbols.length);
 	for(var i=0; i < data.length; i++){
 		stockSymbols.push(data[i].symbol);

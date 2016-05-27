@@ -3,7 +3,7 @@
 "meta" : { 
 "type" : "resource-list",
 "start" : 0,
-"count" : 3
+"count" : 11
 },
 "resources" : [ 
 {
@@ -11,12 +11,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Apple Inc.",
-"price" : "99.699898",
+"price" : "100.410004",
 "symbol" : "AAPL",
-"ts" : "1464282175",
+"ts" : "1464292800",
 "type" : "equity",
-"utctime" : "2016-05-26T17:02:55+0000",
-"volume" : "33825884"
+"utctime" : "2016-05-26T20:00:00+0000",
+"volume" : "56331159"
 }
 }
 }
@@ -26,12 +26,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Morgan Stanley Common Stock",
-"price" : "27.434999",
+"price" : "27.420000",
 "symbol" : "MS",
-"ts" : "1464282165",
+"ts" : "1464292904",
 "type" : "equity",
-"utctime" : "2016-05-26T17:02:45+0000",
-"volume" : "4997948"
+"utctime" : "2016-05-26T20:01:44+0000",
+"volume" : "10080056"
 }
 }
 }
@@ -41,12 +41,132 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Cisco Systems, Inc.",
-"price" : "28.887100",
+"price" : "28.900000",
 "symbol" : "CSCO",
-"ts" : "1464282173",
+"ts" : "1464292800",
 "type" : "equity",
-"utctime" : "2016-05-26T17:02:53+0000",
-"volume" : "10446494"
+"utctime" : "2016-05-26T20:00:00+0000",
+"volume" : "19366299"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Take-Two Interactive Software, ",
+"price" : "38.650002",
+"symbol" : "TTWO",
+"ts" : "1464292800",
+"type" : "equity",
+"utctime" : "2016-05-26T20:00:00+0000",
+"volume" : "1304428"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Masco Corporation Common Stock",
+"price" : "32.369999",
+"symbol" : "MAS",
+"ts" : "1464292916",
+"type" : "equity",
+"utctime" : "2016-05-26T20:01:56+0000",
+"volume" : "2982814"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Johnson Controls, Inc. Common S",
+"price" : "44.049999",
+"symbol" : "JCI",
+"ts" : "1464292980",
+"type" : "equity",
+"utctime" : "2016-05-26T20:03:00+0000",
+"volume" : "4259275"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Pfizer, Inc. Common Stock",
+"price" : "34.430000",
+"symbol" : "PFE",
+"ts" : "1464292805",
+"type" : "equity",
+"utctime" : "2016-05-26T20:00:05+0000",
+"volume" : "25290595"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "JP Morgan Chase &amp; Co. Common St",
+"price" : "65.029999",
+"symbol" : "JPM",
+"ts" : "1464292813",
+"type" : "equity",
+"utctime" : "2016-05-26T20:00:13+0000",
+"volume" : "9428352"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Whole Foods Market, Inc.",
+"price" : "32.509998",
+"symbol" : "WFM",
+"ts" : "1464292800",
+"type" : "equity",
+"utctime" : "2016-05-26T20:00:00+0000",
+"volume" : "4751660"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Microsoft Corporation",
+"price" : "51.889999",
+"symbol" : "MSFT",
+"ts" : "1464292800",
+"type" : "equity",
+"utctime" : "2016-05-26T20:00:00+0000",
+"volume" : "24335223"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "T. Rowe Price Group, Inc.",
+"price" : "76.660004",
+"symbol" : "TROW",
+"ts" : "1464292800",
+"type" : "equity",
+"utctime" : "2016-05-26T20:00:00+0000",
+"volume" : "723828"
 }
 }
 }
