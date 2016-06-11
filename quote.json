@@ -3,7 +3,7 @@
 "meta" : { 
 "type" : "resource-list",
 "start" : 0,
-"count" : 11
+"count" : 21
 },
 "resources" : [ 
 {
@@ -11,12 +11,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Apple Inc.",
-"price" : "100.410004",
+"price" : "98.879997",
 "symbol" : "AAPL",
-"ts" : "1464292800",
+"ts" : "1465399690",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:00+0000",
-"volume" : "56331159"
+"utctime" : "2016-06-08T15:28:10+0000",
+"volume" : "8208674"
 }
 }
 }
@@ -26,12 +26,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Morgan Stanley Common Stock",
-"price" : "27.420000",
+"price" : "26.500099",
 "symbol" : "MS",
-"ts" : "1464292904",
+"ts" : "1465399683",
 "type" : "equity",
-"utctime" : "2016-05-26T20:01:44+0000",
-"volume" : "10080056"
+"utctime" : "2016-06-08T15:28:03+0000",
+"volume" : "4200324"
 }
 }
 }
@@ -41,12 +41,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Cisco Systems, Inc.",
-"price" : "28.900000",
+"price" : "29.209999",
 "symbol" : "CSCO",
-"ts" : "1464292800",
+"ts" : "1465399689",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:00+0000",
-"volume" : "19366299"
+"utctime" : "2016-06-08T15:28:09+0000",
+"volume" : "7476638"
 }
 }
 }
@@ -56,12 +56,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Take-Two Interactive Software, ",
-"price" : "38.650002",
+"price" : "39.049999",
 "symbol" : "TTWO",
-"ts" : "1464292800",
+"ts" : "1465399636",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:00+0000",
-"volume" : "1304428"
+"utctime" : "2016-06-08T15:27:16+0000",
+"volume" : "983040"
 }
 }
 }
@@ -71,12 +71,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Masco Corporation Common Stock",
-"price" : "32.369999",
+"price" : "31.930000",
 "symbol" : "MAS",
-"ts" : "1464292916",
+"ts" : "1465399681",
 "type" : "equity",
-"utctime" : "2016-05-26T20:01:56+0000",
-"volume" : "2982814"
+"utctime" : "2016-06-08T15:28:01+0000",
+"volume" : "1099914"
 }
 }
 }
@@ -86,12 +86,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Johnson Controls, Inc. Common S",
-"price" : "44.049999",
+"price" : "44.610001",
 "symbol" : "JCI",
-"ts" : "1464292980",
+"ts" : "1465399679",
 "type" : "equity",
-"utctime" : "2016-05-26T20:03:00+0000",
-"volume" : "4259275"
+"utctime" : "2016-06-08T15:27:59+0000",
+"volume" : "1327775"
 }
 }
 }
@@ -101,12 +101,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Pfizer, Inc. Common Stock",
-"price" : "34.430000",
+"price" : "35.193501",
 "symbol" : "PFE",
-"ts" : "1464292805",
+"ts" : "1465399686",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:05+0000",
-"volume" : "25290595"
+"utctime" : "2016-06-08T15:28:06+0000",
+"volume" : "8067482"
 }
 }
 }
@@ -116,12 +116,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "JP Morgan Chase &amp; Co. Common St",
-"price" : "65.029999",
+"price" : "65.184998",
 "symbol" : "JPM",
-"ts" : "1464292813",
+"ts" : "1465399682",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:13+0000",
-"volume" : "9428352"
+"utctime" : "2016-06-08T15:28:02+0000",
+"volume" : "3061798"
 }
 }
 }
@@ -131,12 +131,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Whole Foods Market, Inc.",
-"price" : "32.509998",
+"price" : "35.150002",
 "symbol" : "WFM",
-"ts" : "1464292800",
+"ts" : "1465399667",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:00+0000",
-"volume" : "4751660"
+"utctime" : "2016-06-08T15:27:47+0000",
+"volume" : "1122819"
 }
 }
 }
@@ -146,12 +146,12 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "Microsoft Corporation",
-"price" : "51.889999",
+"price" : "51.990002",
 "symbol" : "MSFT",
-"ts" : "1464292800",
+"ts" : "1465399690",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:00+0000",
-"volume" : "24335223"
+"utctime" : "2016-06-08T15:28:10+0000",
+"volume" : "6976634"
 }
 }
 }
@@ -161,12 +161,162 @@
 "classname" : "Quote",
 "fields" : { 
 "name" : "T. Rowe Price Group, Inc.",
-"price" : "76.660004",
+"price" : "75.089996",
 "symbol" : "TROW",
-"ts" : "1464292800",
+"ts" : "1465399666",
 "type" : "equity",
-"utctime" : "2016-05-26T20:00:00+0000",
-"volume" : "723828"
+"utctime" : "2016-06-08T15:27:46+0000",
+"volume" : "302268"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Altria Group, Inc.",
+"price" : "65.580002",
+"symbol" : "MO",
+"ts" : "1465399687",
+"type" : "equity",
+"utctime" : "2016-06-08T15:28:07+0000",
+"volume" : "1763577"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Coca-Cola Company (The) Common ",
+"price" : "45.590000",
+"symbol" : "KO",
+"ts" : "1465399690",
+"type" : "equity",
+"utctime" : "2016-06-08T15:28:10+0000",
+"volume" : "2514332"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "AFLAC Incorporated Common Stock",
+"price" : "69.570000",
+"symbol" : "AFL",
+"ts" : "1465399666",
+"type" : "equity",
+"utctime" : "2016-06-08T15:27:46+0000",
+"volume" : "331372"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "General Mills, Inc. Common Stoc",
+"price" : "64.150002",
+"symbol" : "GIS",
+"ts" : "1465399680",
+"type" : "equity",
+"utctime" : "2016-06-08T15:28:00+0000",
+"volume" : "622332"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Wells Fargo &amp; Company Common St",
+"price" : "49.955002",
+"symbol" : "WFC",
+"ts" : "1465399686",
+"type" : "equity",
+"utctime" : "2016-06-08T15:28:06+0000",
+"volume" : "6236835"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "NXP Semiconductors N.V.",
+"price" : "90.339996",
+"symbol" : "NXPI",
+"ts" : "1465399681",
+"type" : "equity",
+"utctime" : "2016-06-08T15:28:01+0000",
+"volume" : "1064277"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Xilinx, Inc.",
+"price" : "47.180000",
+"symbol" : "XLNX",
+"ts" : "1465399634",
+"type" : "equity",
+"utctime" : "2016-06-08T15:27:14+0000",
+"volume" : "365079"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "CSX Corporation",
+"price" : "27.120001",
+"symbol" : "CSX",
+"ts" : "1465399686",
+"type" : "equity",
+"utctime" : "2016-06-08T15:28:06+0000",
+"volume" : "3114862"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Avis Budget Group, Inc.",
+"price" : "33.990002",
+"symbol" : "CAR",
+"ts" : "1465399649",
+"type" : "equity",
+"utctime" : "2016-06-08T15:27:29+0000",
+"volume" : "1308587"
+}
+}
+}
+,
+{
+"resource" : { 
+"classname" : "Quote",
+"fields" : { 
+"name" : "Cognizant Technology Solutions ",
+"price" : "61.200001",
+"symbol" : "CTSH",
+"ts" : "1465399690",
+"type" : "equity",
+"utctime" : "2016-06-08T15:28:10+0000",
+"volume" : "855797"
 }
 }
 }

@@ -32,8 +32,8 @@
 		    	<% appdata.forEach(function(item) { %>
 		        <tr>
 		            <td><%= item.symbol%></td>
-		            <td><%= item.price%></td>
-		            <td><%= item.alert_price%></td>
+		            <td><div id="<%= item.symbol%>_price"><%= item.price%></div></td>
+		            <td><div id="<%= item.symbol%>_alert" class="alert"><%= item.alert_price%></div></td>
 		            <td><button onclick="showDlg('<%= item.symbol%>', '<%= item.alert_price%>');">Change</button>
 		            &nbsp;&nbsp;<button onclick="deleteStock('<%= item.symbol%>');">Delete</button></td>
 		        </tr>
@@ -76,7 +76,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
  	<script>
  	$(document).ready(function(){
- 		 $('#stockTable').DataTable();
+ 		 $('#stockTable').DataTable({
+ 		 	paging: false
+ 		 });
  		 $( "#editDialog" ).dialog();
  		 $( "#addDialog" ).dialog();
  		 $('#addDialog').dialog("close");
@@ -105,7 +107,7 @@
           });
           $('#addDialog').dialog("close");
         });
-
+ 		 applyColors();
 
  	});
 
@@ -125,6 +127,17 @@
 			}
 			$('#jqTableDiv').html(table);
 			$('#stockTable').DataTable();
+		}
+
+		function applyColors(){
+			$( ".alert" ).each(function( index ) {
+				var symbol = $(this).attr('id').split('_')[0];
+				var price = $("#"+symbol+"_price").text();
+  				if(price - $(this).text() <= 1){
+  					console.log('alert this symbol' + symbol);
+  					$(this).css('background-color', 'yellow');
+  				}
+			});
 		}
 
  	function showDlg(symbol, alertPrice){
